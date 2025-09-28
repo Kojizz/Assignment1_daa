@@ -11,7 +11,7 @@ Metrics (comparisons, allocations, recursion depth, runtime) are tracked and wri
 
 ---
 
-## ⚙️ Architecture Notes
+## Architecture Notes
 - **Metrics**: counts comparisons, allocations, recursion depth, and time.
 - **Depth control**: each recursive call increments a counter, and the maximum is tracked (`enterRecursion()` / `leaveRecursion()`).
 - **Allocations**: tracked whenever new buffers/arrays are created (e.g., MergeSort temporary buffer).
@@ -19,7 +19,7 @@ Metrics (comparisons, allocations, recursion depth, runtime) are tracked and wri
 
 ---
 
-## 📐 Recurrence Analysis
+## Recurrence Analysis
 
 ### MergeSort
 - Recurrence: `T(n) = 2T(n/2) + Θ(n)` (merging step).
@@ -43,7 +43,7 @@ Metrics (comparisons, allocations, recursion depth, runtime) are tracked and wri
 
 ---
 
-## 📊 Plots
+## Plots
 
 - **Time vs n**:  
   - MergeSort & ClosestPair scale as `n log n`.  
@@ -63,7 +63,7 @@ Metrics (comparisons, allocations, recursion depth, runtime) are tracked and wri
 
 ---
 
-## 📌 Summary
+## Summary
 - Theoretical bounds mostly align with measurements:
   - `MergeSort` and `ClosestPair`: `Θ(n log n)` confirmed.  
   - `QuickSort`: expected `Θ(n log n)` but sometimes slower (bad pivots).  
